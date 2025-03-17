@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://t3.ftcdn.net/jpg/06/37/79/62/360_F_637796226_liOHveRjDicrSL7U5Z4ErzMaFf2c1ybe.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        header, footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+        }
+        a { color: white; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .recipe-block {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .recipe-block:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px white;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center">
+        <h1>Delicious Recipes</h1>
+        <nav>
+            <a href="#recipes" class="mx-3">Recipes</a>
+            <a href="#categories" class="mx-3">Categories</a>
+            <a href="#contact" class="mx-3">Submit a Recipe</a>
+        </nav>
+    </header>
+
+    <div class="container mt-4" id="recipes">
+        <h2>Recipes</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="recipe-block">
+                    <h3>Butter Chicken</h3>
+                    <p>Ingredients: Chicken, Butter, Cream, Tomatoes, Spices.</p>
+                    <p>Instructions: Marinate chicken, cook with tomatoes and spices, add butter and cream.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="recipe-block">
+                    <h3>Paneer Tikka</h3>
+                    <p>Ingredients: Paneer, Yogurt, Spices, Bell Peppers.</p>
+                    <p>Instructions: Marinate paneer, grill with vegetables until charred.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="recipe-block">
+                    <h3>Masala Dosa</h3>
+                    <p>Ingredients: Rice, Urad Dal, Potatoes, Spices.</p>
+                    <p>Instructions: Prepare batter, cook dosa, fill with spiced potato mixture.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="recipe-block">
+                    <h3>Biryani</h3>
+                    <p>Ingredients: Basmati Rice, Chicken/Mutton, Spices, Yogurt, Saffron.</p>
+                    <p>Instructions: Cook meat with spices, layer with rice, cook on low heat.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="recipe-block">
+                    <h3>Gulab Jamun</h3>
+                    <p>Ingredients: Milk Powder, Flour, Sugar, Cardamom.</p>
+                    <p>Instructions: Prepare dough, fry balls, soak in sugar syrup.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4" id="categories">
+        <h2>Recipe Categories</h2>
+        <ul>
+            <li>Breakfast</li>
+            <li>Lunch</li>
+            <li>Dinner</li>
+            <li>Desserts</li>
+            <li>Vegetarian</li>
+        </ul>
+    </div>
+
+    <div class="container mt-4" id="contact">
+        <h2>Submit Your Recipe</h2>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Recipe Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Ingredients</label>
+                <textarea class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Instructions</label>
+                <textarea class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2025 Delicious Recipes</p>
+    </footer>
+</body>
+</html>

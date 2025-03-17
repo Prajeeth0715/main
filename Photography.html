@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .header {
+            background: url('https://source.unsplash.com/1600x900/?photography') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .header:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(138, 43, 226, 0.8);
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(138, 43, 226, 0.8);
+        }
+        .about, .contact {
+            background: rgba(138, 43, 226, 0.2);
+            padding: 50px 0;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .about:hover, .contact:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(138, 43, 226, 0.8);
+        }
+        .footer {
+            background: rgba(138, 43, 226, 0.9);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        figcaption {
+            font-style: italic;
+            color: lightgray;
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>My Photography Portfolio</h1>
+    </header>
+
+    <section class="container gallery mt-5" id="gallery">
+        <h2 class="text-center mb-4">Gallery</h2>
+        <div class="row g-4">
+            <div class="col-md-4"><figure><img src="images (2).jpeg" class="img-fluid" alt="Photo 1"><figcaption>A Lamborghini </figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="images (3).jpeg" class="img-fluid" alt="Photo 2"><figcaption>Chevorlette Avalanche</figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="360_F_637796226_liOHveRjDicrSL7U5Z4ErzMaFf2c1ybe.jpg" class="img-fluid" alt="Photo 3"><figcaption>Picture captured for avertisement of a resturant </figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="lavender-fields-5120x2880-21314.jpg" class="img-fluid" alt="Photo 4"><figcaption>Lavender fields at dusk</figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="krish-parmar-OWrNn8s8So8-unsplash (1).jpg" class="img-fluid" alt="Photo 5"><figcaption>Ford Cobra in city landscapes</figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="images (4).jpeg" class="img-fluid" alt="Photo 6"><figcaption>Hatchback in the night landscape</figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="a-majestic-tiger-against-a-black-background-photo.jpg" class="img-fluid" alt="Photo 6"><figcaption>A Wild Tiger</figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="premium_photo-1701091956254-8f24ea99a53b.avif" class="img-fluid" alt="Photo 6"><figcaption>MoonLit Night </figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="download (3).jpeg" class="img-fluid" alt="Photo 6"><figcaption>Night landscape</figcaption></figure></div>
+            <div class="col-md-4"><figure><img src="images (4).jpeg" class="img-fluid" alt="Photo 6"><figcaption>Hatchback in the night landscape</figcaption></figure></div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I am a professional photographer with a deep passion for capturing the beauty of the world through my lens. Specializing in nature, urban, and portrait photography, I strive to tell compelling visual stories that evoke emotions and create lasting memories. With an eye for detail and a commitment to excellence, I blend creativity with technical expertise to produce stunning, high-quality images. Whether it's the serenity of landscapes, the vibrancy of city life, or the raw emotions in portraits, my goal is to turn moments into timeless works of art.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Me</h2>
+            <form class="mx-auto" style="max-width: 500px;">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Full Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email Address" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <button class="btn btn-primary w-100">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Follow me on <a href="www.linkedin.com/in/prajeeth-s-a66a19201" class="text-light">linkedin</a> | <a href="https://mail.google.com/mail/" class="text-light">Gmail</a></p>
+    </footer>
+</body>
+</html>

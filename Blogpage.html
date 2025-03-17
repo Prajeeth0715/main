@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Cars - Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: black; color: rgb(245, 245, 245); scroll-behavior: smooth; }
+        header, footer { background-color: #222; padding: 15px; border-bottom: 3px solid rgb(238, 237, 229); }
+        a { color: rgb(214, 192, 72); text-decoration: none; font-weight: bold; }
+        a:hover { color: #e5e3db; }
+        .container { background-color: #111; padding: 20px; border-radius: 10px; border: 2px solid white; }
+        .post { 
+            background-color: #1a1a1a; 
+            padding: 15px; 
+            border-radius: 10px; 
+            border: 2px solid white; 
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .post:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px white;
+        }
+        .post img { 
+            width: 100%; 
+            border-radius: 10px; 
+            margin-bottom: 10px; 
+            border: 2px solid white; 
+        }
+        h1, h2, h3 { color: white; }
+        .btn-custom { background-color: white; color: black; font-weight: bold; }
+        .btn-custom:hover { background-color: #e5e3db; color: black; }
+        section { padding: 50px 0; }
+    </style>
+</head>
+<body>
+    <header id="home" class="text-center text-white">
+        <h1>WORLD OF CARS</h1>
+        <nav>
+            <a href="#home" class="mx-2">Home</a>
+            <a href="#categories" class="mx-2">Categories</a>
+            <a href="#contact" class="mx-2">Contact</a>
+        </nav>
+    </header>
+    
+    <div id="categories" class="container mt-4">
+        <h2 class="text-center">Categories</h2>
+        <div class="row">
+            <main class="col-md-8">
+                <article id="sedan" class="post">
+                    <h2>Sedans: The Perfect Daily Driver</h2>
+                    <img src="360_F_1053452830_W3X8Dqz3bDelpvWEZpMNdWEKJCixmZ0O.jpg" alt="Sedan">
+                    <p><small>March 14, 2025</small></p>
+                    <p>Sedans offer a balance between comfort, fuel efficiency, and practicality. Popular models include the Toyota Camry and BMW 3 Series.</p>
+                </article>
+                <article id="suv" class="post">
+                    <h2>SUVs: Power and Versatility</h2>
+                    <img src="download (1).jpeg" alt="SUV">
+                    <p><small>March 13, 2025</small></p>
+                    <p>SUVs provide spacious interiors and great off-road capabilities. Popular models include the Ford Explorer and Jeep Wrangler.</p>
+                </article>
+                <article id="sports" class="post">
+                    <h2>Sports Cars: Speed and Performance</h2>
+                    <img src="images (2).jpeg" alt="Sports Car">
+                    <p><small>March 12, 2025</small></p>
+                    <p>Sports cars like the Ford Mustang and Porsche 911 offer high speed and thrilling driving experiences.</p>
+                </article>
+                <article id="electric" class="post">
+                    <h2>Electric Cars: The Future of Driving</h2>
+                    <img src="download (2).jpeg" alt="Electric Car">
+                    <p><small>March 11, 2025</small></p>
+                    <p>Electric vehicles like Tesla Model S and Nissan Leaf are leading the way in eco-friendly transportation.</p>
+                </article>
+                <article id="pickup" class="post">
+                    <h2>Pickup Trucks: Strength and Utility</h2>
+                    <img src="images (3).jpeg" alt="Pickup Truck">
+                    <p><small>March 10, 2025</small></p>
+                    <p>Trucks like the Ford F-150 and Chevrolet Silverado are known for their power and durability.</p>
+                </article>
+                <article id="hatchback" class="post">
+                    <h2>Hatchbacks: Compact and Practical</h2>
+                    <img src="images (4).jpeg" alt="Hatchback">
+                    <p><small>March 9, 2025</small></p>
+                    <p>Hatchbacks like the Volkswagen Golf and Honda Fit offer great fuel efficiency and easy maneuverability.</p>
+                </article>
+            </main>
+            
+            <aside class="col-md-4 sidebar">
+                <h3>Recent Posts</h3>
+                <ul>
+                    <li><a href="#sedan">Sedans: The Perfect Daily Driver</a></li>
+                    <li><a href="#suv">SUVs: Power and Versatility</a></li>
+                    <li><a href="#sports">Sports Cars: Speed and Performance</a></li>
+                    <li><a href="#electric">Electric Cars: The Future of Driving</a></li>
+                    <li><a href="#pickup">Pickup Trucks: Strength and Utility</a></li>
+                    <li><a href="#hatchback">Hatchbacks: Compact and Practical</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    
+    <footer id="contact" class="text-center text-white mt-4">
+        <h2>Contact</h2>
+        <p> <a href="https://mail.google.com/mail/">prajeeth0715@gmail.com </a> | Follow us on <a href="https://www.linkedin.com/in/prajeeth-s-a66a19201/">LinkedIn</a></p>
+    </footer>
+</body>
+</html>

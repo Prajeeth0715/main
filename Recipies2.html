@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://t3.ftcdn.net/jpg/06/37/79/62/360_F_637796226_liOHveRjDicrSL7U5Z4ErzMaFf2c1ybe.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        header, footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+        }
+        a { color: white; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .recipe-block {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .recipe-block:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px white;
+        }
+        .category-btn {
+            margin: 5px;
+        }
+        .recipe-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center">
+        <h1>Delicious Recipes</h1>
+        <nav>
+            <a href="#recipes" class="mx-3">Recipes</a>
+            <a href="#categories" class="mx-3">Categories</a>
+            <a href="#contact" class="mx-3">Submit a Recipe</a>
+        </nav>
+    </header>
+
+    <div class="container mt-4" id="recipes">
+        <h2>Recipes</h2>
+        
+        <!-- Breakfast Recipes -->
+        <div class="recipe-section" id="breakfast">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="recipe-block">
+                        <h3>Idli</h3>
+                        <p>Ingredients: Rice, Urad Dal, Salt.</p>
+                        <p>Instructions: Soak, grind, ferment, and steam.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="recipe-block">
+                        <h3>Poha</h3>
+                        <p>Ingredients: Flattened rice, Peanuts, Spices.</p>
+                        <p>Instructions: Sauté and cook lightly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lunch Recipes -->
+        <div class="recipe-section" id="lunch">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="recipe-block">
+                        <h3>Dal Tadka</h3>
+                        <p>Ingredients: Lentils, Spices, Ghee.</p>
+                        <p>Instructions: Cook dal, add tadka.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="recipe-block">
+                        <h3>Paneer Butter Masala</h3>
+                        <p>Ingredients: Paneer, Butter, Tomato, Spices.</p>
+                        <p>Instructions: Cook gravy, add paneer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dinner Recipes -->
+        <div class="recipe-section" id="dinner">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="recipe-block">
+                        <h3>Masala Dosa</h3>
+                        <p>Ingredients: Rice, Urad Dal, Potato, Spices.</p>
+                        <p>Instructions: Make dosa, add stuffing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-4" id="categories">
+        <h2>Recipe Categories</h2>
+        <button class="btn btn-primary category-btn" onclick="document.getElementById('breakfast').style.display='block';">Breakfast</button>
+        <button class="btn btn-primary category-btn" onclick="document.getElementById('lunch').style.display='block';">Lunch</button>
+        <button class="btn btn-primary category-btn" onclick="document.getElementById('dinner').style.display='block';">Dinner</button>
+    </div>
+
+    <div class="container mt-4" id="contact">
+        <h2>Submit Your Recipe</h2>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Recipe Name</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Ingredients</label>
+                <textarea class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Instructions</label>
+                <textarea class="form-control"></textarea>
+            </div>
+            <div class="alert alert-success d-none" id="successMessage">
+                Recipe submitted successfully! Thank you.
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="document.getElementById('successMessage').classList.remove('d-none');">
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2025 Delicious Recipes</p>
+    </footer>
+
+</body>
+</html>
