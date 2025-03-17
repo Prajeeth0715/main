@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: purple;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+    <h2>Grade Calculator</h2>
+    <label for="scores">Enter scores (comma separated):</label>
+    <input type="text" id="scores" placeholder="e.g., 85,90,78">
+    <button onclick="calculateGrades()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateGrades() {
+            let input = document.getElementById("scores").value;
+            let scores = input.split(',').map(Number);
+            
+            if (scores.some(isNaN)) {
+                document.getElementById("result").innerText = "Please enter valid numbers separated by commas.";
+                return;
+            }
+            
+            let sum = scores.reduce((acc, score) => acc + score, 0);
+            let average = sum / scores.length;
+            
+            let grade;
+            if (average > 90) {
+                grade = 'A';
+            } else if (average > 80) {
+                grade = 'B';
+            } else if (average > 70) {
+                grade = 'C';
+            } else {
+                grade = 'D';
+            }
+            
+            document.getElementById("result").innerText = `Sum: ${sum}, Average: ${average.toFixed(2)}, Grade: ${grade}`;
+        }
+    </script>
+</body>
+</html>

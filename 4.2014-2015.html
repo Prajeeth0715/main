@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Sundays on Jan 1st</title>
+</head>
+<body>
+    <h2>Find Years Where January 1st is a Sunday</h2>
+    <button onclick="findSundays()">Find Years</button>
+    <p id="result"></p>
+
+    <script>
+        function findSundays() {
+            let resultText = "January 1st is a Sunday in the years: <br>";
+            for (let year = 2014; year <= 2050; year++) {
+                let date = new Date(year, 0, 1); // January 1st of the given year
+                if (date.getDay() === 0) { // 0 means Sunday
+                    resultText += year + "<br>";
+                }
+            }
+            document.getElementById("result").innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
